@@ -1,1 +1,1 @@
-Userlens: Behavioral user emulator for rapid product validation. Synthesizes realistic user personas from real customer data.
+Userlens: AI-powered research synthesis platform that transforms qualitative user research into structured personas and actionable product insights.
