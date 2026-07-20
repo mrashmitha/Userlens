@@ -40,6 +40,9 @@ st.markdown(
         background: #f8fbfb;
         border-right: 1px solid #d9e7e8;
     }
+    section[data-testid="stSidebar"] {
+        display: none;
+    }
     div[data-testid="stMetric"] {
         background: #ffffff;
         border: 1px solid #dbe8ea;
@@ -104,6 +107,25 @@ st.markdown(
     .action-card span {
         color: #667985;
         font-size: 0.92rem;
+    }
+    .input-panel {
+        background: #ffffff;
+        border: 1px solid #dbe8ea;
+        border-radius: 18px;
+        padding: 20px;
+        margin: -4px 0 24px;
+        box-shadow: 0 10px 26px rgba(15, 45, 61, 0.05);
+    }
+    .input-heading {
+        color: #102033;
+        font-size: 1.05rem;
+        font-weight: 750;
+        margin-bottom: 4px;
+    }
+    .input-subcopy {
+        color: #637786;
+        font-size: 0.94rem;
+        margin-bottom: 12px;
     }
     .brief-card {
         background: #ffffff;
@@ -248,13 +270,31 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-with st.sidebar:
-    st.header("Analyze Feedback")
-    st.caption("Upload your CSV or test with a sample dataset.")
-    uploaded = st.file_uploader("Upload feedback CSV", type=["csv"], label_visibility="collapsed")
-    sample_name = st.selectbox("Sample dataset", list(SAMPLES.keys()))
-    use_sample = st.toggle("Use selected sample", value=True)
+st.markdown(
+    """
+    <div class="input-panel">
+      <div class="input-heading">Start with feedback</div>
+      <div class="input-subcopy">Upload your own CSV, or download a sample dataset and re-upload it to test the workflow.</div>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
 
+upload_col, sample_col = st.columns([1.25, 1])
+with upload_col:
+    st.markdown('<div class="input-heading">Upload your CSV</div>', unsafe_allow_html=True)
+    uploaded = st.file_uploader(
+        "Upload feedback CSV",
+        type=["csv"],
+        label_visibility="collapsed",
+        help="Expected columns: source, user_type, date, feedback",
+    )
+
+with sample_col:
+    st.markdown('<div class="input-heading">Try sample data</div>', unsafe_allow_html=True)
+    sample_name = st.selectbox("Sample dataset", list(SAMPLES.keys()), label_visibility="collapsed")
+    use_sample = st.toggle("Use selected sample if no file is uploaded", value=True, label_visibility="collapsed")
+    st.caption("Selected sample runs automatically when no CSV is uploaded.")
     sample_path = SAMPLES[sample_name]
     st.download_button(
         "Download sample CSV",
@@ -263,8 +303,6 @@ with st.sidebar:
         mime="text/csv",
         width="stretch",
     )
-    st.divider()
-    st.caption("Expected columns: source, user_type, date, feedback")
     st.caption("MVP method: deterministic taxonomy + scoring. No LLM API key required.")
 
 
