@@ -32,7 +32,7 @@ The goal is not to replace user research. The goal is to help product teams lear
 
 A PM has 12 pieces of feedback from interviews, support tickets, sales calls, and in-app surveys. UserLens AI identifies the strongest product opportunity, explains which user segment is most affected, and produces a report the PM can use in roadmap or design discussions.
 
-![UserLens AI demo](assets/userlens-demo.png)
+![UserLens AI demo](assets/userlens-demo.jpg)
 
 Example output:
 
