@@ -32,7 +32,7 @@ st.markdown(
         color: #102033;
     }
     .block-container {
-        padding-top: 2rem;
+        padding-top: 1.2rem;
         padding-bottom: 3rem;
         max-width: 1160px;
     }
@@ -56,6 +56,47 @@ st.markdown(
         border-radius: 16px;
         padding: 12px;
     }
+    div[data-testid="stFileUploaderDropzone"] {
+        background: #ffffff !important;
+        border: 1.5px dashed #5aa6b1 !important;
+        border-radius: 14px !important;
+    }
+    div[data-testid="stFileUploaderDropzone"] button,
+    div.stButton > button,
+    div.stDownloadButton > button {
+        background: #0f4c5c !important;
+        border: 1px solid #0f4c5c !important;
+        color: #ffffff !important;
+        border-radius: 12px !important;
+        font-weight: 700 !important;
+    }
+    div[data-testid="stFileUploaderDropzone"] button:hover,
+    div.stButton > button:hover,
+    div.stDownloadButton > button:hover {
+        background: #093945;
+        border-color: #093945;
+        color: #ffffff;
+    }
+    div[data-testid="stFileUploaderDropzone"] button:focus,
+    div.stButton > button:focus,
+    div.stDownloadButton > button:focus {
+        outline: 3px solid #8fd3dc;
+        outline-offset: 2px;
+        box-shadow: none;
+    }
+    div[data-testid="stFileUploaderDropzone"] small,
+    div[data-testid="stFileUploaderDropzone"] span,
+    div[data-testid="stFileUploaderDropzone"] p {
+        color: #102033 !important;
+    }
+    div[data-baseweb="select"] > div {
+        background: #ffffff !important;
+        border-color: #9ec9ce !important;
+        color: #102033 !important;
+    }
+    div[data-baseweb="select"] span {
+        color: #102033 !important;
+    }
     h1, h2, h3 {
         letter-spacing: 0;
         color: #102033;
@@ -64,9 +105,10 @@ st.markdown(
         background: #ffffff;
         border: 1px solid #dbe8ea;
         border-radius: 20px;
-        padding: 28px 30px;
+        padding: 16px 22px;
         box-shadow: 0 12px 30px rgba(15, 45, 61, 0.07);
-        margin-bottom: 22px;
+        margin-bottom: 10px;
+        min-height: 245px;
     }
     .eyebrow {
         color: #287782;
@@ -77,63 +119,56 @@ st.markdown(
         margin-bottom: 8px;
     }
     .hero h1 {
-        font-size: 2.35rem;
+        font-size: 1.9rem;
         line-height: 1.12;
-        margin: 0 0 10px;
+        margin: 0 0 6px;
     }
     .hero p {
         color: #5d6f7b;
-        font-size: 1rem;
+        font-size: 0.96rem;
         margin: 0;
         max-width: 720px;
     }
-    .action-strip {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 14px;
-        margin: 18px 0 8px;
-    }
-    .action-card {
-        background: #f9fcfc;
-        border: 1px solid #dbe8ea;
-        border-radius: 14px;
-        padding: 14px 16px;
-    }
-    .action-card strong {
-        display: block;
-        color: #102033;
-        margin-bottom: 4px;
-    }
-    .action-card span {
-        color: #667985;
-        font-size: 0.92rem;
+    .mini-flow {
+        color: #287782;
+        font-size: 0.9rem;
+        font-weight: 650;
+        margin-top: 8px;
     }
     .input-panel {
         background: #ffffff;
         border: 1px solid #dbe8ea;
         border-radius: 18px;
-        padding: 20px;
-        margin: -4px 0 24px;
+        padding: 12px 14px;
+        margin: 0;
         box-shadow: 0 10px 26px rgba(15, 45, 61, 0.05);
     }
     .input-heading {
         color: #102033;
-        font-size: 1.05rem;
+        font-size: 0.98rem;
         font-weight: 750;
-        margin-bottom: 4px;
+        margin-bottom: 2px;
     }
     .input-subcopy {
         color: #637786;
-        font-size: 0.94rem;
-        margin-bottom: 12px;
+        font-size: 0.88rem;
+        margin-bottom: 0;
+    }
+    .compact-input {
+        background: #ffffff;
+        border: 1px solid #dbe8ea;
+        border-radius: 18px;
+        padding: 12px 14px;
+        margin: 8px 0 10px;
+        box-shadow: 0 8px 20px rgba(15, 45, 61, 0.05);
     }
     .brief-card {
         background: #ffffff;
         border: 1px solid #dbe8ea;
         border-radius: 18px;
-        padding: 24px;
+        padding: 18px;
         box-shadow: 0 10px 26px rgba(15, 45, 61, 0.06);
-        margin: 4px 0 20px;
+        margin: 0 0 14px;
     }
     .brief-label {
         color: #287782;
@@ -144,7 +179,7 @@ st.markdown(
     }
     .brief-title {
         color: #102033;
-        font-size: 1.55rem;
+        font-size: 1.35rem;
         font-weight: 750;
         margin: 6px 0 8px;
     }
@@ -163,8 +198,8 @@ st.markdown(
         background: #ffffff;
         border: 1px solid #dbe8ea;
         border-radius: 16px;
-        padding: 18px;
-        min-height: 164px;
+        padding: 14px;
+        min-height: 130px;
         box-shadow: 0 8px 22px rgba(15, 45, 61, 0.05);
     }
     .rank {
@@ -195,21 +230,21 @@ st.markdown(
     }
     .section-heading {
         color: #102033;
-        font-size: 1.35rem;
+        font-size: 1.22rem;
         font-weight: 750;
-        margin: 24px 0 12px;
+        margin: 16px 0 10px;
     }
     .metric-grid {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 16px;
-        margin: 8px 0 22px;
+        margin: 6px 0 12px;
     }
     .metric-card {
         background: #ffffff;
         border: 1px solid #dbe8ea;
         border-radius: 16px;
-        padding: 18px 20px;
+        padding: 14px 16px;
         box-shadow: 0 8px 24px rgba(15, 45, 61, 0.06);
     }
     .metric-label {
@@ -220,28 +255,14 @@ st.markdown(
     }
     .metric-value {
         color: #102033;
-        font-size: 1.85rem;
+        font-size: 1.55rem;
         font-weight: 780;
         line-height: 1.1;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    div.stDownloadButton > button {
-        border-radius: 12px;
-        border: 1px solid #287782;
-        background: #287782;
-        color: white;
-    }
-    div.stDownloadButton > button:hover {
-        border: 1px solid #1f6570;
-        background: #1f6570;
-        color: white;
-    }
     @media (max-width: 760px) {
-        .action-strip {
-            grid-template-columns: 1fr;
-        }
         .metric-grid {
             grid-template-columns: 1fr 1fr;
         }
@@ -254,65 +275,47 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-st.markdown(
-    """
-    <div class="hero">
-      <div class="eyebrow">Feedback intelligence</div>
-      <h1>UserLens AI</h1>
-      <p>Turn scattered user feedback into executive-ready opportunity areas, hypotheses, and roadmap actions.</p>
-      <div class="action-strip">
-        <div class="action-card"><strong>1. Upload feedback</strong><span>Use your CSV or start with a sample dataset.</span></div>
-        <div class="action-card"><strong>2. Review signals</strong><span>See top patterns, urgency, and affected users.</span></div>
-        <div class="action-card"><strong>3. Act faster</strong><span>Download a roadmap-ready decision brief.</span></div>
-      </div>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
-
-st.markdown(
-    """
-    <div class="input-panel">
-      <div class="input-heading">Start with feedback</div>
-      <div class="input-subcopy">Upload your own CSV, or download a sample dataset and re-upload it to test the workflow.</div>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
-
-upload_col, sample_col = st.columns([1.25, 1])
-with upload_col:
-    st.markdown('<div class="input-heading">Upload your CSV</div>', unsafe_allow_html=True)
-    uploaded = st.file_uploader(
-        "Upload feedback CSV",
-        type=["csv"],
-        label_visibility="collapsed",
-        help="Expected columns: source, user_type, date, feedback",
+top_left, top_right = st.columns([1.6, 1])
+with top_left:
+    st.markdown(
+        """
+        <div class="hero">
+          <div class="eyebrow">Feedback intelligence</div>
+          <h1>UserLens AI</h1>
+          <p>Turn scattered user feedback into executive-ready opportunity areas, hypotheses, and roadmap actions.</p>
+          <div class="mini-flow">1. Upload feedback · 2. Review signals · 3. Act on the top opportunity</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
     )
 
-with sample_col:
-    st.markdown('<div class="input-heading">Try sample data</div>', unsafe_allow_html=True)
-    sample_name = st.selectbox("Sample dataset", list(SAMPLES.keys()), label_visibility="collapsed")
-    use_sample = st.toggle("Use selected sample if no file is uploaded", value=True, label_visibility="collapsed")
-    st.caption("Selected sample runs automatically when no CSV is uploaded.")
-    sample_path = SAMPLES[sample_name]
-    st.download_button(
-        "Download sample CSV",
-        sample_path.read_text(encoding="utf-8"),
-        file_name=sample_path.name,
-        mime="text/csv",
-        width="stretch",
-    )
-    st.caption("MVP method: deterministic taxonomy + scoring. No LLM API key required.")
+with top_right:
+    with st.container(border=True):
+        st.markdown('<div class="input-heading">Upload your CSV</div>', unsafe_allow_html=True)
+        uploaded = st.file_uploader(
+            "Upload feedback CSV",
+            type=["csv"],
+            label_visibility="collapsed",
+            help="Expected columns: source, user_type, date, feedback",
+        )
+        st.markdown('<div class="input-heading">Try sample data</div>', unsafe_allow_html=True)
+        sample_name = st.selectbox("Sample dataset", list(SAMPLES.keys()), label_visibility="collapsed")
+        sample_path = SAMPLES[sample_name]
+        st.download_button(
+            "Download sample CSV",
+            sample_path.read_text(encoding="utf-8"),
+            file_name=sample_path.name,
+            mime="text/csv",
+            width="stretch",
+        )
+        st.caption("No CSV uploaded? The selected sample runs automatically.")
 
 
 def load_records():
     if uploaded is not None:
         text = uploaded.getvalue().decode("utf-8")
         return load_feedback_csv(io.StringIO(text))
-    if use_sample:
-        return load_feedback_csv(SAMPLES[sample_name])
-    return []
+    return load_feedback_csv(SAMPLES[sample_name])
 
 
 records = load_records()
