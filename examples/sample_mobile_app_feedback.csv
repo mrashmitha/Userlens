@@ -1,0 +1,12 @@
+source,user_type,date,feedback
+App Store review,New mobile user,2026-07-01,"The app looks clean but onboarding is confusing. I was not sure why it asked for location before showing value."
+In-app survey,Returning user,2026-07-02,"Notifications are helpful, but there are too many. I need better control over what is urgent."
+Support ticket,Premium user,2026-07-03,"My subscription plan says premium, but the export feature is still locked. Billing support has not replied."
+App Store review,New mobile user,2026-07-04,"Setup took too long and I abandoned it when the verification code failed."
+Interview,Power user,2026-07-05,"I love the saved templates, but editing several items one by one is slow and manual."
+Support ticket,Returning user,2026-07-06,"The sync is broken across devices. I updated my account on mobile and the web dashboard is missing the latest status."
+In-app survey,Team manager,2026-07-07,"I need visibility into which team members completed the checklist before our weekly review."
+Interview,Premium user,2026-07-08,"Pricing is unclear. I cannot tell whether contractors need paid seats or guest access."
+Support ticket,Security-conscious user,2026-07-09,"I am blocked because SSO login keeps failing and our admin needs audit access before rollout."
+App Store review,New mobile user,2026-07-10,"The first screen is attractive, but I did not know what to configure first."
+

@@ -28,6 +28,12 @@ The goal is not to replace user research. The goal is to help product teams lear
 - Generates a Markdown report with evidence snippets and hypotheses
 - Runs locally without requiring an LLM API key
 
+## Methodology
+
+The MVP does not use an LLM yet. Pattern detection uses a transparent taxonomy, and scoring uses an explainable formula based on frequency, negative sentiment, and urgency. This keeps the first version easy to test, inspect, and discuss in interviews.
+
+Read the full methodology in [docs/methodology.md](docs/methodology.md).
+
 ## Demo Use Case
 
 A PM has 12 pieces of feedback from interviews, support tickets, sales calls, and in-app surveys. Userlens AI identifies the strongest product opportunity, explains which user segment is most affected, and produces a report the PM can use in roadmap or design discussions.
@@ -93,6 +99,7 @@ Read more in [docs/architecture.md](docs/architecture.md).
 
 - [docs/PRD.md](docs/PRD.md): Product requirements and portfolio narrative
 - [docs/product_decisions.md](docs/product_decisions.md): MVP tradeoffs and AI roadmap
+- [docs/methodology.md](docs/methodology.md): Pattern detection, scoring logic, and future LLM plan
 - [docs/demo_results.md](docs/demo_results.md): What the sample demo proves
 - [examples/sample_output_report.md](examples/sample_output_report.md): Example generated report
 - [tests](tests): Basic PII and analysis tests

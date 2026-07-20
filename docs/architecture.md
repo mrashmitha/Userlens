@@ -28,3 +28,15 @@ Opportunity score is based on:
 
 The score is capped at 100 so it is easy to compare across themes.
 
+## MVP Method
+
+The current MVP uses deterministic pattern detection and scoring. It does not call an LLM.
+
+This keeps the first version:
+
+- Easy to run without credentials
+- Reproducible across demos
+- Transparent for product and technical review
+- Ready for a future LLM-assisted synthesis layer
+
+See [methodology.md](methodology.md) for the full explanation.

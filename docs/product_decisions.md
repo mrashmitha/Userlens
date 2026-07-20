@@ -15,6 +15,8 @@ The local classifier is intentionally transparent:
 - Opportunity scores are simple enough to explain in an interview.
 - The output is reproducible from the sample dataset.
 
+No LLM is used in the MVP. This is a product scoping decision, not a technical limitation. The first release proves the workflow and makes the prioritization logic inspectable.
+
 ## What AI Adds Next
 
 The next layer should add LLM-assisted synthesis after the deterministic pipeline:
@@ -27,4 +29,3 @@ The next layer should add LLM-assisted synthesis after the deterministic pipelin
 ## What This Product Does Not Claim
 
 UserLens AI does not replace formal user research. It helps PMs make sense of weak signals earlier and decide what deserves deeper validation.
-

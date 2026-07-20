@@ -1,0 +1,12 @@
+source,user_type,date,feedback
+Checkout survey,First-time shopper,2026-07-01,"Checkout was confusing because shipping costs appeared too late. I almost abandoned the cart."
+Support ticket,Returning customer,2026-07-02,"The discount code did not work and the error message was unclear."
+User interview,Budget-conscious shopper,2026-07-03,"Pricing looks fair, but I need to compare bundles before choosing the higher plan."
+Post-purchase survey,Gift buyer,2026-07-04,"I could not tell whether the gift message would be included before payment."
+Support ticket,Loyalty member,2026-07-05,"My account points are missing from the dashboard and support cannot explain the status."
+Site feedback,Mobile shopper,2026-07-06,"The checkout page is slow on mobile and sometimes loses my address."
+User interview,Returning customer,2026-07-07,"Bulk reorder would save time because I buy the same items every month."
+Support ticket,First-time shopper,2026-07-08,"I am worried I selected the wrong shipping option because there is no final preview."
+Checkout survey,Gift buyer,2026-07-09,"The delivery date was unclear and I needed confidence before placing the order."
+Site feedback,Loyalty member,2026-07-10,"The rewards page is useful, but I need better visibility into when points expire."
+

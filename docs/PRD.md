@@ -34,6 +34,7 @@ It does not replace formal research. It helps teams learn faster and decide what
 ### In Scope
 
 - Upload or use a sample feedback CSV
+- Download sample feedback datasets for testing
 - Redact obvious PII before analysis
 - Classify each feedback item into a product theme
 - Label sentiment and urgency
@@ -47,6 +48,7 @@ It does not replace formal research. It helps teams learn faster and decide what
 - Production database
 - Real-time third-party integrations
 - LLM API calls
+- Embedding-based clustering
 - Persona chat
 - Full research repository management
 
@@ -87,6 +89,8 @@ The MVP scores each opportunity using:
 
 The score is intentionally simple and explainable for an MVP. A future version could add account value, customer segment, retention risk, and confidence scoring.
 
+The current MVP does not use an LLM for pattern detection or scoring. The methodology is documented in [methodology.md](methodology.md).
+
 ## 9. AI Roadmap
 
 The first version is local-first so anyone can test it without API keys. The next version should add LLM-assisted synthesis:
@@ -106,4 +110,3 @@ UserLens AI demonstrates the core skill set of an AI Product Manager:
 - Protecting user privacy before analysis
 - Creating explainable prioritization logic
 - Shipping a working product with tests, examples, and documentation
-

@@ -1,0 +1,12 @@
+source,user_type,date,feedback
+Support ticket,IT admin,2026-07-01,"Permissions are unclear. I cannot tell which role allows users to export audit logs."
+Customer call,Operations lead,2026-07-02,"We need bulk updates because manually changing settings across 40 workspaces takes too much time."
+Support ticket,Security admin,2026-07-03,"SSO setup is broken and we are blocked from rollout until compliance approves access controls."
+Interview,Finance approver,2026-07-04,"Pricing by seat is hard to understand because contractors only need occasional access."
+Support ticket,Team manager,2026-07-05,"The dashboard is missing status for two teams, so I do not trust the weekly report."
+Customer call,IT admin,2026-07-06,"Role names feel too technical. I need examples of what each permission does."
+Survey,Operations lead,2026-07-07,"Automation would help us copy templates across customers instead of repeating the same workflow."
+Support ticket,Security admin,2026-07-08,"Audit export failed with an error, and our reviewer needs it urgently."
+Interview,New admin,2026-07-09,"Onboarding did not explain what to configure first after inviting the first team."
+Survey,Finance approver,2026-07-10,"The upgrade page is unclear about which plan includes advanced reporting."
+
