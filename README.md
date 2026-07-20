@@ -1,14 +1,14 @@
-# UserLens AI
+# Userlens AI
 
 Near-real-time feedback intelligence for faster product decisions.
 
-UserLens AI helps product managers turn scattered user feedback into product themes, user needs, hypotheses, and roadmap-ready prioritization signals before waiting weeks for a formal research synthesis cycle.
+Userlens AI helps product managers turn scattered user feedback into product themes, user needs, hypotheses, and roadmap-ready prioritization signals before waiting weeks for a formal research synthesis cycle.
 
 ## Why I Built This
 
 Product teams make design and roadmap decisions while feedback is still scattered across interviews, support tickets, surveys, sales notes, and internal docs. Formal research is valuable, but it can take 3-4 weeks to recruit, conduct, synthesize, and socialize findings.
 
-UserLens AI is built around a practical PM workflow:
+Userlens AI is built around a practical PM workflow:
 
 1. Bring messy feedback into one place.
 2. Redact obvious PII.
@@ -30,9 +30,9 @@ The goal is not to replace user research. The goal is to help product teams lear
 
 ## Demo Use Case
 
-A PM has 12 pieces of feedback from interviews, support tickets, sales calls, and in-app surveys. UserLens AI identifies the strongest product opportunity, explains which user segment is most affected, and produces a report the PM can use in roadmap or design discussions.
+A PM has 12 pieces of feedback from interviews, support tickets, sales calls, and in-app surveys. Userlens AI identifies the strongest product opportunity, explains which user segment is most affected, and produces a report the PM can use in roadmap or design discussions.
 
-![UserLens AI demo](assets/userlens-demo.png)
+![Userlens AI demo](assets/Userlens-demo.png)
 
 Example output:
 
@@ -53,7 +53,7 @@ Then open the local Streamlit URL and keep "Use sample feedback" enabled.
 
 ## CSV Format
 
-UserLens expects a CSV with these columns:
+Userlens expects a CSV with these columns:
 
 ```csv
 source,user_type,date,feedback
@@ -102,7 +102,3 @@ Read more in [docs/architecture.md](docs/architecture.md).
 - Add integrations with Slack, Zendesk, Intercom, Dovetail, Productboard, and Linear
 - Add a hypothesis backlog view
 - Add before/after tracking to measure whether shipped changes reduce repeated feedback themes
-
-## Interview Narrative
-
-"I built UserLens AI because PMs often wait weeks for formal research synthesis while roadmap and design decisions are already moving. The MVP ingests user feedback, redacts PII, detects product themes, labels urgency and sentiment, and turns patterns into prioritized hypotheses. I scoped the first version to be local-first and testable in under five minutes, then documented the roadmap for LLM-powered synthesis and workflow integrations."
