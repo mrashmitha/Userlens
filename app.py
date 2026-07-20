@@ -282,8 +282,8 @@ with top_left:
         <div class="hero">
           <div class="eyebrow">Feedback intelligence</div>
           <h1>UserLens AI</h1>
-          <p>Turn scattered user feedback into executive-ready opportunity areas, hypotheses, and roadmap actions.</p>
-          <div class="mini-flow">1. Upload feedback · 2. Review signals · 3. Act on the top opportunity</div>
+      <p>Find the clearest product opportunities hidden inside user feedback.</p>
+      <div class="mini-flow">Upload feedback · Review the top signals · Decide what to validate next</div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -291,24 +291,24 @@ with top_left:
 
 with top_right:
     with st.container(border=True):
-        st.markdown('<div class="input-heading">Upload your CSV</div>', unsafe_allow_html=True)
+        st.markdown('<div class="input-heading">Upload feedback</div>', unsafe_allow_html=True)
         uploaded = st.file_uploader(
-            "Upload feedback CSV",
+            "Upload feedback",
             type=["csv"],
             label_visibility="collapsed",
-            help="Expected columns: source, user_type, date, feedback",
+            help="Use a CSV with source, user_type, date, and feedback columns.",
         )
-        st.markdown('<div class="input-heading">Try sample data</div>', unsafe_allow_html=True)
+        st.markdown('<div class="input-heading">Try sample feedback</div>', unsafe_allow_html=True)
         sample_name = st.selectbox("Sample dataset", list(SAMPLES.keys()), label_visibility="collapsed")
         sample_path = SAMPLES[sample_name]
         st.download_button(
-            "Download sample CSV",
+            "Download sample",
             sample_path.read_text(encoding="utf-8"),
             file_name=sample_path.name,
             mime="text/csv",
             width="stretch",
         )
-        st.caption("No CSV uploaded? The selected sample runs automatically.")
+        st.caption("No upload yet? UserLens runs this sample automatically.")
 
 
 def load_records():
@@ -321,7 +321,7 @@ def load_records():
 records = load_records()
 
 if not records:
-    st.info("Upload a CSV or use the sample feedback to generate insights.")
+    st.info("Upload feedback or use a sample to generate insights.")
     st.stop()
 
 analysis = analyze_feedback(records)
