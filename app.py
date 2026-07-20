@@ -32,7 +32,7 @@ st.markdown(
         color: #102033;
     }
     .block-container {
-        padding-top: 1.2rem;
+        padding-top: 2.2rem;
         padding-bottom: 3rem;
         max-width: 1160px;
     }
@@ -108,7 +108,7 @@ st.markdown(
         padding: 16px 22px;
         box-shadow: 0 12px 30px rgba(15, 45, 61, 0.07);
         margin-bottom: 10px;
-        min-height: 245px;
+        min-height: 220px;
     }
     .eyebrow {
         color: #287782;
