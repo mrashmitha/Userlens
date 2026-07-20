@@ -1,19 +1,27 @@
-# core/distiller.py
-import json
+"""Backward-compatible facade for the original UserLens distiller class."""
+
+from __future__ import annotations
+
 from typing import Dict, List
 
+from core.analyzer import FeedbackRecord, analyze_feedback
+from core.pii import redact_pii
+
+
 class UserLensDistiller:
-    """
-    Parses raw user metrics, handles automated PII data scrubbing,
-    and generates tokenized user cluster vector maps.
-    """
-    def __init__(self, embedding_model: str = "text-embedding-3-small"):
-        self.model = embedding_model
+    """Transforms raw user feedback into roadmap-ready product insights."""
 
     def scrub_pii(self, raw_text: str) -> str:
-        # TODO: Integrate regex masks and local token classifiers to remove IPs/Emails
-        pass
+        return redact_pii(raw_text)
 
     def generate_persona_schema(self, text_chunks: List[str]) -> Dict:
-        # Enforces structured output formatting via Pydantic matching technical literacy and frustrations
-        return {"status": "initialized", "persona_clusters": []}
+        records = [
+            FeedbackRecord(source="Text chunk", user_type="Unknown user", feedback=chunk)
+            for chunk in text_chunks
+        ]
+        analysis = analyze_feedback(records)
+        return {"status": "complete", "persona_clusters": analysis["opportunities"]}
+
+    def analyze(self, records: List[FeedbackRecord]) -> Dict:
+        return analyze_feedback(records)
+
