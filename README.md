@@ -76,6 +76,8 @@ This project demonstrates AI product management skills across:
 
 ## Architecture
 
+![UserLens AI workflow](assets/userlens-workflow.svg)
+
 ```mermaid
 flowchart LR
     A[Feedback CSV] --> B[PII Redaction]

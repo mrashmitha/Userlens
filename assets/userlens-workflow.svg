@@ -1,0 +1,77 @@
+<svg width="1280" height="520" viewBox="0 0 1280 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">UserLens AI workflow</title>
+  <desc id="desc">Workflow from raw feedback sources to PII guardrail, pattern detection, opportunity scoring, hypotheses, and roadmap decision brief.</desc>
+  <rect width="1280" height="520" rx="28" fill="#0F172A"/>
+  <rect x="36" y="36" width="1208" height="448" rx="24" fill="#111827" stroke="#263449"/>
+  <text x="72" y="92" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">UserLens AI Workflow</text>
+  <text x="72" y="126" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="18">From scattered feedback to roadmap-ready product decisions</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2 2L10 6L2 10" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <style>
+      .node { fill: #172033; stroke: #334155; stroke-width: 1.5; }
+      .accent { fill: #0B3B4A; stroke: #0EA5E9; }
+      .label { fill: #F8FAFC; font-family: Inter, Arial, sans-serif; font-size: 18px; font-weight: 700; }
+      .small { fill: #CBD5E1; font-family: Inter, Arial, sans-serif; font-size: 14px; }
+      .tag { fill: #BAE6FD; font-family: Inter, Arial, sans-serif; font-size: 13px; font-weight: 700; }
+      .arrow { stroke: #38BDF8; stroke-width: 2.5; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <g transform="translate(72 176)">
+    <rect class="node" x="0" y="0" width="156" height="126" rx="16"/>
+    <text class="tag" x="20" y="30">INPUT</text>
+    <text class="label" x="20" y="62">Feedback</text>
+    <text class="small" x="20" y="88">Interviews, tickets,</text>
+    <text class="small" x="20" y="108">surveys, sales notes</text>
+  </g>
+
+  <line class="arrow" x1="238" y1="239" x2="305" y2="239"/>
+
+  <g transform="translate(316 176)">
+    <rect class="node" x="0" y="0" width="156" height="126" rx="16"/>
+    <text class="tag" x="20" y="30">GUARDRAIL</text>
+    <text class="label" x="20" y="62">Redact PII</text>
+    <text class="small" x="20" y="88">Mask sensitive data</text>
+    <text class="small" x="20" y="108">before analysis</text>
+  </g>
+
+  <line class="arrow" x1="482" y1="239" x2="549" y2="239"/>
+
+  <g transform="translate(560 176)">
+    <rect class="node" x="0" y="0" width="156" height="126" rx="16"/>
+    <text class="tag" x="20" y="30">SYNTHESIS</text>
+    <text class="label" x="20" y="62">Detect Patterns</text>
+    <text class="small" x="20" y="88">Themes, sentiment,</text>
+    <text class="small" x="20" y="108">urgency, segments</text>
+  </g>
+
+  <line class="arrow" x1="726" y1="239" x2="793" y2="239"/>
+
+  <g transform="translate(804 176)">
+    <rect class="node" x="0" y="0" width="156" height="126" rx="16"/>
+    <text class="tag" x="20" y="30">PRIORITIZE</text>
+    <text class="label" x="20" y="62">Score Opportunities</text>
+    <text class="small" x="20" y="88">Frequency, severity,</text>
+    <text class="small" x="20" y="108">and urgency</text>
+  </g>
+
+  <line class="arrow" x1="970" y1="239" x2="1037" y2="239"/>
+
+  <g transform="translate(1048 176)">
+    <rect class="accent" x="0" y="0" width="156" height="126" rx="16"/>
+    <text class="tag" x="20" y="30">OUTPUT</text>
+    <text class="label" x="20" y="62">Decision Brief</text>
+    <text class="small" x="20" y="88">Hypotheses and</text>
+    <text class="small" x="20" y="108">roadmap actions</text>
+  </g>
+
+  <g transform="translate(120 354)">
+    <rect x="0" y="0" width="1040" height="72" rx="18" fill="#0B1220" stroke="#263449"/>
+    <circle cx="36" cy="36" r="10" fill="#38BDF8"/>
+    <text x="60" y="31" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Core PM job</text>
+    <text x="60" y="53" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="15">Learn user patterns earlier, validate sharper hypotheses, and make better prioritization calls before a full research cycle finishes.</text>
+  </g>
+</svg>

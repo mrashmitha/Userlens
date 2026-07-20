@@ -20,14 +20,14 @@ SAMPLE_FEEDBACK = ROOT / "examples" / "sample_feedback.csv"
 st.set_page_config(page_title="UserLens AI", page_icon="UL", layout="wide")
 
 st.title("UserLens AI")
-st.caption("Near-real-time feedback intelligence for faster product decisions.")
+st.caption("Turn scattered feedback into prioritized product opportunities.")
 
 with st.sidebar:
     st.header("Input")
     uploaded = st.file_uploader("Upload feedback CSV", type=["csv"])
     use_sample = st.toggle("Use sample feedback", value=True)
     st.divider()
-    st.write("Expected columns: source, user_type, date, feedback")
+    st.caption("Expected columns: source, user_type, date, feedback")
 
 
 def load_records():
@@ -54,6 +54,20 @@ metric_cols[1].metric("Opportunity themes", len(analysis["opportunities"]))
 metric_cols[2].metric("Top score", analysis["top_opportunity"]["opportunity_score"])
 metric_cols[3].metric("Top theme", analysis["top_opportunity"]["theme"])
 
+top = analysis["top_opportunity"]
+
+st.subheader("Decision Brief")
+brief_cols = st.columns([1.2, 1])
+with brief_cols[0]:
+    st.markdown(f"### {top['theme']}")
+    st.write(top["need"])
+    st.markdown(f"**Hypothesis:** {top['hypothesis']}")
+
+with brief_cols[1]:
+    st.markdown("### Evidence")
+    for evidence in top["evidence"]:
+        st.write(f"- {evidence}")
+
 st.subheader("Prioritized Opportunities")
 opportunity_df = pd.DataFrame(analysis["opportunities"])
 st.dataframe(
@@ -68,22 +82,19 @@ st.dataframe(
             "hypothesis",
         ]
     ],
-    use_container_width=True,
+    width="stretch",
     hide_index=True,
 )
 
-left, right = st.columns([1, 1])
-with left:
-    st.subheader("Feedback With AI-Ready Labels")
-    st.dataframe(pd.DataFrame(analysis["records"]), use_container_width=True, hide_index=True)
+st.download_button(
+    "Download Roadmap Report",
+    report,
+    file_name="userlens_feedback_report.md",
+    mime="text/markdown",
+)
 
-with right:
-    st.subheader("Roadmap Report")
-    st.download_button(
-        "Download Markdown Report",
-        report,
-        file_name="userlens_feedback_report.md",
-        mime="text/markdown",
-    )
+with st.expander("View full roadmap report"):
     st.markdown(report)
 
+with st.expander("View labeled feedback"):
+    st.dataframe(pd.DataFrame(analysis["records"]), width="stretch", hide_index=True)
