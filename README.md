@@ -57,6 +57,13 @@ streamlit run app.py
 
 Then open the local Streamlit URL and keep "Use sample feedback" enabled.
 
+## Test The App
+
+Try the live app and follow the tester guide:
+
+- [Live UserLens AI app](https://userlensai-uixn8nwtchddbfycj369hy.streamlit.app/)
+- [How to test UserLens AI](docs/how_to_test.md)
+
 ## CSV Format
 
 Userlens expects a CSV with these columns:
@@ -98,6 +105,7 @@ Read more in [docs/architecture.md](docs/architecture.md).
 ## Repository Guide
 
 - [docs/PRD.md](docs/PRD.md): Product requirements and portfolio narrative
+- [docs/how_to_test.md](docs/how_to_test.md): Step-by-step tester guide
 - [docs/product_decisions.md](docs/product_decisions.md): MVP tradeoffs and AI roadmap
 - [docs/methodology.md](docs/methodology.md): Pattern detection, scoring logic, and future LLM plan
 - [docs/demo_results.md](docs/demo_results.md): What the sample demo proves
