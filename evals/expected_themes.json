@@ -1,0 +1,29 @@
+{
+  "examples/sample_feedback.csv": [
+    "Admin and permissions",
+    "Onboarding friction",
+    "Pricing and packaging",
+    "Reporting and visibility",
+    "Workflow efficiency"
+  ],
+  "examples/sample_mobile_app_feedback.csv": [
+    "Onboarding friction",
+    "Pricing and packaging",
+    "Reporting and visibility",
+    "Trust and reliability",
+    "Workflow efficiency"
+  ],
+  "examples/sample_ecommerce_feedback.csv": [
+    "General feedback",
+    "Pricing and packaging",
+    "Reporting and visibility",
+    "Trust and reliability",
+    "Workflow efficiency"
+  ],
+  "examples/sample_b2b_support_feedback.csv": [
+    "Admin and permissions",
+    "Pricing and packaging",
+    "Reporting and visibility",
+    "Workflow efficiency"
+  ]
+}

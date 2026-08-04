@@ -11,6 +11,7 @@ import streamlit as st
 from core.analyzer import analyze_feedback
 from core.io import load_feedback_csv
 from core.report_writer import write_markdown_report
+from core.roi import estimate_roi
 
 
 ROOT = Path(__file__).parent
@@ -282,8 +283,8 @@ with top_left:
         <div class="hero">
           <div class="eyebrow">Feedback intelligence</div>
           <h1>UserLens AI</h1>
-      <p>Find the clearest product opportunities hidden inside user feedback.</p>
-      <div class="mini-flow">Upload feedback · Review the top signals · Decide what to validate next</div>
+          <p>Find the clearest product opportunities hidden inside user feedback.</p>
+          <div class="mini-flow">Upload feedback · Review the top signals · Decide what to validate next</div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -327,6 +328,7 @@ if not records:
 analysis = analyze_feedback(records)
 report = write_markdown_report(analysis)
 top = analysis["top_opportunity"]
+roi = estimate_roi(analysis["total_feedback"])
 
 st.markdown(
     f"""
@@ -375,6 +377,51 @@ st.download_button(
     file_name="userlens_feedback_report.md",
     mime="text/markdown",
 )
+
+st.markdown('<div class="section-heading">Business Impact Estimate</div>', unsafe_allow_html=True)
+impact_cols = st.columns(3)
+impact_cols[0].markdown(
+    f"""
+    <div class="metric-card">
+      <div class="metric-label">Time saved per review</div>
+      <div class="metric-value">{roi['hours_saved_per_cycle']} hrs</div>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
+impact_cols[1].markdown(
+    f"""
+    <div class="metric-card">
+      <div class="metric-label">Estimated savings per review</div>
+      <div class="metric-value">${roi['cycle_cost_savings']:,}</div>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
+impact_cols[2].markdown(
+    f"""
+    <div class="metric-card">
+      <div class="metric-label">Annualized team impact</div>
+      <div class="metric-value">${roi['annual_cost_savings']:,}</div>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
+
+with st.expander("How this estimate is calculated"):
+    st.write(
+        "This is a conservative planning estimate, not a measured production result. "
+        "It assumes roughly 3 minutes of manual review per feedback item, plus synthesis time. "
+        "UserLens still assumes human review, but reduces first-pass sorting and brief creation time."
+    )
+    st.markdown(
+        f"""
+        - Manual estimate: **{roi['manual_hours']} hours** per review cycle
+        - UserLens-assisted estimate: **{roi['userlens_hours']} hours** per review cycle
+        - Review frequency: **{roi['cycles_per_month']} cycles/month**
+        - Loaded hourly cost: **${roi['loaded_hourly_cost']}/hour**
+        """
+    )
 
 st.markdown('<div class="section-heading">Prioritized Opportunities</div>', unsafe_allow_html=True)
 card_cols = st.columns(3)

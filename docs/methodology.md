@@ -64,3 +64,14 @@ The MVP is built to show the product workflow clearly: raw feedback becomes patt
 
 The AI roadmap should improve synthesis quality, but the product value is the decision loop.
 
+## Evaluation Baseline
+
+The MVP includes deterministic evals in `evals/`.
+
+These evals check:
+
+- Whether expected themes appear for each sample dataset.
+- Whether each opportunity includes evidence snippets.
+- Whether each opportunity includes a user need and hypothesis.
+
+This gives UserLens a baseline before adding LLM-assisted synthesis. Future AI features should improve synthesis quality without reducing evidence grounding or actionability.

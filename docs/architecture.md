@@ -6,7 +6,9 @@ flowchart LR
     B --> C[Theme Classification]
     C --> D[Sentiment and Urgency Labels]
     D --> E[Opportunity Scoring]
-    E --> F[Roadmap Insights Report]
+    E --> F[Business Impact Estimate]
+    F --> G[Roadmap Insights Report]
+    G --> H[Evaluation Checks]
 ```
 
 ## Pipeline
@@ -16,7 +18,9 @@ flowchart LR
 3. Classify each feedback item into a product theme.
 4. Label sentiment and urgency.
 5. Group patterns into prioritized opportunities.
-6. Generate a Markdown report with evidence snippets and hypotheses to validate.
+6. Estimate time and cost savings from faster synthesis.
+7. Generate a Markdown report with evidence snippets and hypotheses to validate.
+8. Run eval checks for theme recall, evidence grounding, and actionability.
 
 ## Scoring
 

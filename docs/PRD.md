@@ -41,6 +41,8 @@ It does not replace formal research. It helps teams learn faster and decide what
 - Group feedback into product opportunities
 - Score opportunities using frequency, negative sentiment, and high urgency
 - Generate a Markdown report with evidence snippets and hypotheses
+- Estimate time and cost savings from faster synthesis
+- Run evaluation checks against sample datasets
 
 ### Out of Scope
 
@@ -67,6 +69,8 @@ It does not replace formal research. It helps teams learn faster and decide what
 - The sample dataset produces multiple product opportunity themes.
 - The top opportunity includes evidence, affected user segment, and a hypothesis.
 - PII redaction tests pass for emails, phone numbers, and IP addresses.
+- Evaluation checks pass for sample datasets.
+- Business impact estimate is visible and explainable.
 - The repo clearly communicates PM judgment, technical execution, and roadmap thinking.
 
 ## 7. Product Metrics
